@@ -1,0 +1,222 @@
+[
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "MATH 212",
+    "title": "Multivariable Calculus",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": [],
+    "description": "Vectors, curves, partial derivatives, multiple integrals, vector calculus.",
+    "tags": ["math", "foundation"],
+    "source_url": "https://ga.rice.edu/courses/math-212/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "BIOE 252",
+    "title": "Introduction to Biomechanics",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["MATH 212"],
+    "description": "Foundations of biomechanics including statics, dynamics, and material properties of biological systems.",
+    "tags": ["core", "bioe"],
+    "source_url": "https://ga.rice.edu/courses/bioe-252/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "BIOE 372",
+    "title": "Systems Physiology",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["BIOE 252"],
+    "description": "Quantitative analysis of human physiological systems including cardiovascular, respiratory, and neural systems.",
+    "tags": ["core", "bioe", "physiology"],
+    "source_url": "https://ga.rice.edu/courses/bioe-372/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "BIOE 310",
+    "title": "Bioengineering Laboratory I",
+    "credits": 4,
+    "terms": ["Fall"],
+    "prereqs": ["BIOE 252"],
+    "description": "Laboratory techniques in bioengineering. Emphasis on experimental design and data analysis. Lab component required.",
+    "tags": ["core", "bioe", "lab"],
+    "source_url": "https://ga.rice.edu/courses/bioe-310/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "BIOE 420",
+    "title": "Biomaterials",
+    "credits": 3,
+    "terms": ["Spring"],
+    "prereqs": ["BIOE 252"],
+    "description": "Structure, properties, and applications of biomaterials in medical devices and tissue engineering.",
+    "tags": ["elective", "bioe", "materials"],
+    "source_url": "https://ga.rice.edu/courses/bioe-420/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "BIOE 415",
+    "title": "Tissue Engineering",
+    "credits": 3,
+    "terms": ["Fall"],
+    "prereqs": ["BIOE 372"],
+    "description": "Principles of tissue engineering including scaffolds, cell culture, and regenerative medicine.",
+    "tags": ["elective", "bioe", "tissue"],
+    "source_url": "https://ga.rice.edu/courses/bioe-415/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "BIOE 450",
+    "title": "Medical Device Design",
+    "credits": 3,
+    "terms": ["Spring"],
+    "prereqs": ["BIOE 310"],
+    "description": "Design and development of medical devices. FDA regulations, prototyping, and clinical testing.",
+    "tags": ["elective", "bioe", "design"],
+    "source_url": "https://ga.rice.edu/courses/bioe-450/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "CHEM 121",
+    "title": "General Chemistry I",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": [],
+    "description": "Fundamental principles of chemistry including atomic structure, bonding, and thermodynamics.",
+    "tags": ["chemistry", "foundation", "pre-med"],
+    "source_url": "https://ga.rice.edu/courses/chem-121/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "CHEM 122",
+    "title": "General Chemistry II",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CHEM 121"],
+    "description": "Continuation of general chemistry including kinetics, equilibrium, and electrochemistry. Lab component.",
+    "tags": ["chemistry", "foundation", "pre-med"],
+    "source_url": "https://ga.rice.edu/courses/chem-122/"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "code": "BIOC 301",
+    "title": "Biochemistry",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CHEM 122"],
+    "description": "Structure and function of proteins, nucleic acids, carbohydrates, and lipids. Enzyme kinetics and metabolism.",
+    "tags": ["biochemistry", "pre-med"],
+    "source_url": "https://ga.rice.edu/courses/bioc-301/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "COMP 140",
+    "title": "Introduction to Computer Programming",
+    "credits": 4,
+    "terms": ["Fall", "Spring"],
+    "prereqs": [],
+    "description": "Introduction to programming using Python. Problem-solving, algorithms, and data structures.",
+    "tags": ["core", "cs", "programming"],
+    "source_url": "https://ga.rice.edu/courses/comp-140/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "COMP 182",
+    "title": "Algorithmic Thinking",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["COMP 140"],
+    "description": "Design and analysis of algorithms. Complexity, graphs, dynamic programming.",
+    "tags": ["core", "cs", "algorithms"],
+    "source_url": "https://ga.rice.edu/courses/comp-182/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "COMP 215",
+    "title": "Introduction to Program Design",
+    "credits": 4,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["COMP 140"],
+    "description": "Software design, object-oriented programming in Java, testing, and debugging.",
+    "tags": ["core", "cs", "programming"],
+    "source_url": "https://ga.rice.edu/courses/comp-215/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "COMP 321",
+    "title": "Introduction to Computer Systems",
+    "credits": 4,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["COMP 215"],
+    "description": "Computer architecture, assembly language, operating systems, and system-level programming.",
+    "tags": ["core", "cs", "systems"],
+    "source_url": "https://ga.rice.edu/courses/comp-321/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "COMP 330",
+    "title": "Tools and Models of Data Science",
+    "credits": 3,
+    "terms": ["Fall"],
+    "prereqs": ["COMP 182"],
+    "description": "Statistical methods, machine learning basics, and data analysis using Python and R.",
+    "tags": ["elective", "cs", "data-science"],
+    "source_url": "https://ga.rice.edu/courses/comp-330/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "COMP 382",
+    "title": "Reasoning About Algorithms",
+    "credits": 3,
+    "terms": ["Spring"],
+    "prereqs": ["COMP 182"],
+    "description": "Advanced algorithm design techniques including approximation, randomization, and complexity theory.",
+    "tags": ["elective", "cs", "algorithms"],
+    "source_url": "https://ga.rice.edu/courses/comp-382/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "COMP 424",
+    "title": "Database Systems",
+    "credits": 3,
+    "terms": ["Fall"],
+    "prereqs": ["COMP 215"],
+    "description": "Relational databases, SQL, normalization, transactions, and query optimization.",
+    "tags": ["elective", "cs", "database"],
+    "source_url": "https://ga.rice.edu/courses/comp-424/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "COMP 440",
+    "title": "Artificial Intelligence",
+    "credits": 3,
+    "terms": ["Spring"],
+    "prereqs": ["COMP 182"],
+    "description": "Search algorithms, knowledge representation, machine learning, and neural networks.",
+    "tags": ["elective", "cs", "ai"],
+    "source_url": "https://ga.rice.edu/courses/comp-440/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "MATH 354",
+    "title": "Honors Linear Algebra",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": [],
+    "description": "Vector spaces, linear transformations, eigenvalues, and applications.",
+    "tags": ["math", "foundation"],
+    "source_url": "https://ga.rice.edu/courses/math-354/"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "code": "STAT 310",
+    "title": "Probability and Statistics",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["MATH 212"],
+    "description": "Probability theory, random variables, distributions, hypothesis testing, and regression.",
+    "tags": ["statistics", "math"],
+    "source_url": "https://ga.rice.edu/courses/stat-310/"
+  }
+]

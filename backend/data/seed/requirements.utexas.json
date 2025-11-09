@@ -1,0 +1,114 @@
+[
+  {
+    "program_id": "utexas-bme-2025",
+    "requirement_id": "utexas-bme-core-1",
+    "type": "AND",
+    "description": "Complete all BME core courses",
+    "rules": [
+      {"type": "COURSE", "code": "BME 303"},
+      {"type": "COURSE", "code": "BME 335"},
+      {"type": "COURSE", "code": "BME 344"},
+      {"type": "COURSE", "code": "BME 353L"}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, BME Degree Requirements",
+    "source_url": "https://catalog.utexas.edu/undergraduate/engineering/biomedical-engineering/#degreerequirementstext"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "requirement_id": "utexas-bme-math",
+    "type": "COURSE",
+    "description": "Complete multivariable calculus",
+    "rules": [
+      {"type": "COURSE", "code": "M 408D"}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, BME Mathematics Requirements",
+    "source_url": "https://catalog.utexas.edu/undergraduate/engineering/biomedical-engineering/#degreerequirementstext"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "requirement_id": "utexas-bme-electives",
+    "type": "ELECTIVE_GROUP",
+    "description": "Complete at least 2 BME technical electives",
+    "rules": [
+      {"type": "MIN_COUNT", "count": 2, "from": [
+        {"type": "COURSE", "code": "BME 365S"},
+        {"type": "COURSE", "code": "BME 371"}
+      ]}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, BME Technical Elective Requirements",
+    "source_url": "https://catalog.utexas.edu/undergraduate/engineering/biomedical-engineering/#degreerequirementstext"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "requirement_id": "utexas-bme-chem",
+    "type": "AND",
+    "description": "Complete chemistry sequence",
+    "rules": [
+      {"type": "COURSE", "code": "CH 301"},
+      {"type": "COURSE", "code": "CH 302"}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, BME Chemistry Requirements",
+    "source_url": "https://catalog.utexas.edu/undergraduate/engineering/biomedical-engineering/#degreerequirementstext"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "requirement_id": "utexas-cs-core-programming",
+    "type": "AND",
+    "description": "Complete programming and data structures",
+    "rules": [
+      {"type": "COURSE", "code": "CS 312"},
+      {"type": "COURSE", "code": "CS 314"}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, CS Core Programming Requirements",
+    "source_url": "https://catalog.utexas.edu/undergraduate/natural-sciences/computer-science/#degreerequirementstext"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "requirement_id": "utexas-cs-theory",
+    "type": "AND",
+    "description": "Complete theory requirements",
+    "rules": [
+      {"type": "COURSE", "code": "CS 311"},
+      {"type": "COURSE", "code": "CS 331"}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, CS Theory Requirements",
+    "source_url": "https://catalog.utexas.edu/undergraduate/natural-sciences/computer-science/#degreerequirementstext"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "requirement_id": "utexas-cs-systems",
+    "type": "COURSE",
+    "description": "Complete computer organization",
+    "rules": [
+      {"type": "COURSE", "code": "CS 429"}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, CS Systems Requirement",
+    "source_url": "https://catalog.utexas.edu/undergraduate/natural-sciences/computer-science/#degreerequirementstext"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "requirement_id": "utexas-cs-electives",
+    "type": "ELECTIVE_GROUP",
+    "description": "Complete at least 3 CS electives at upper division",
+    "rules": [
+      {"type": "MIN_COUNT", "count": 3, "from": [
+        {"type": "COURSE", "code": "CS 343"},
+        {"type": "COURSE", "code": "CS 373"},
+        {"type": "COURSE", "code": "CS 378"}
+      ]}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, CS Elective Requirements",
+    "source_url": "https://catalog.utexas.edu/undergraduate/natural-sciences/computer-science/#degreerequirementstext"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "requirement_id": "utexas-cs-math",
+    "type": "COURSE",
+    "description": "Complete linear algebra",
+    "rules": [
+      {"type": "COURSE", "code": "M 340L"}
+    ],
+    "text_source": "UT Austin Undergraduate Catalog 2025, CS Math Requirements",
+    "source_url": "https://catalog.utexas.edu/undergraduate/natural-sciences/computer-science/#degreerequirementstext"
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "program_id": "stanford-bioe-2025",
+    "requirement_id": "stanford-bioe-core-1",
+    "type": "AND",
+    "description": "Complete all BIOE core foundation courses",
+    "rules": [
+      {"type": "COURSE", "code": "BIOE 80"},
+      {"type": "COURSE", "code": "BIOE 101"},
+      {"type": "COURSE", "code": "BIOE 141"},
+      {"type": "COURSE", "code": "BIOE 142"}
+    ],
+    "text_source": "Stanford Bulletin 2025, Bioengineering Core Requirements",
+    "source_url": "https://bulletin.stanford.edu/programs/bioengineering#corerequirementstext"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "requirement_id": "stanford-bioe-math",
+    "type": "COURSE",
+    "description": "Complete math foundation",
+    "rules": [
+      {"type": "COURSE", "code": "MATH 51"}
+    ],
+    "text_source": "Stanford Bulletin 2025, Bioengineering Mathematics Requirements",
+    "source_url": "https://bulletin.stanford.edu/programs/bioengineering#corerequirementstext"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "requirement_id": "stanford-bioe-electives",
+    "type": "ELECTIVE_GROUP",
+    "description": "Complete at least 2 BIOE depth electives",
+    "rules": [
+      {"type": "MIN_COUNT", "count": 2, "from": [
+        {"type": "COURSE", "code": "BIOE 212"},
+        {"type": "COURSE", "code": "BIOE 220"},
+        {"type": "COURSE", "code": "BIOE 244"}
+      ]}
+    ],
+    "text_source": "Stanford Bulletin 2025, Bioengineering Depth Requirements",
+    "source_url": "https://bulletin.stanford.edu/programs/bioengineering#depthelectives"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "requirement_id": "stanford-bioe-chem",
+    "type": "AND",
+    "description": "Complete chemistry sequence",
+    "rules": [
+      {"type": "COURSE", "code": "CHEM 31A"},
+      {"type": "COURSE", "code": "CHEM 31B"}
+    ],
+    "text_source": "Stanford Bulletin 2025, Bioengineering Chemistry Requirements",
+    "source_url": "https://bulletin.stanford.edu/programs/bioengineering#corerequirementstext"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "requirement_id": "stanford-cs-core-1",
+    "type": "AND",
+    "description": "Complete CS core foundation sequence",
+    "rules": [
+      {"type": "COURSE", "code": "CS 103"},
+      {"type": "COURSE", "code": "CS 106B"},
+      {"type": "COURSE", "code": "CS 107"},
+      {"type": "COURSE", "code": "CS 161"}
+    ],
+    "text_source": "Stanford Bulletin 2025, Computer Science Core Requirements",
+    "source_url": "https://bulletin.stanford.edu/programs/computer-science#corerequirementstext"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "requirement_id": "stanford-cs-systems",
+    "type": "COURSE",
+    "description": "Complete systems requirement",
+    "rules": [
+      {"type": "COURSE", "code": "CS 110"}
+    ],
+    "text_source": "Stanford Bulletin 2025, Computer Science Systems Requirement",
+    "source_url": "https://bulletin.stanford.edu/programs/computer-science#corerequirementstext"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "requirement_id": "stanford-cs-math",
+    "type": "AND",
+    "description": "Complete mathematics requirements",
+    "rules": [
+      {"type": "COURSE", "code": "MATH 51"},
+      {"type": "COURSE", "code": "CS 109"}
+    ],
+    "text_source": "Stanford Bulletin 2025, Computer Science Math Requirements",
+    "source_url": "https://bulletin.stanford.edu/programs/computer-science#mathrequirementstext"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "requirement_id": "stanford-cs-depth",
+    "type": "ELECTIVE_GROUP",
+    "description": "Complete at least 2 depth courses in one track",
+    "rules": [
+      {"type": "MIN_COUNT", "count": 2, "from": [
+        {"type": "COURSE", "code": "CS 221"},
+        {"type": "COURSE", "code": "CS 229"},
+        {"type": "COURSE", "code": "CS 190"}
+      ]}
+    ],
+    "text_source": "Stanford Bulletin 2025, Computer Science Depth Requirements",
+    "source_url": "https://bulletin.stanford.edu/programs/computer-science#depthrequirementstext"
+  }
+]

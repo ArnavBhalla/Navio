@@ -1,0 +1,222 @@
+[
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "M 408D",
+    "title": "Sequences, Series, and Multivariable Calculus",
+    "credits": 4,
+    "terms": ["Fall", "Spring", "Summer"],
+    "prereqs": [],
+    "description": "Infinite sequences and series, power series, vector algebra and calculus.",
+    "tags": ["math", "foundation"],
+    "source_url": "https://catalog.utexas.edu/courses/m-408d/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "BME 303",
+    "title": "Introduction to Biomedical Engineering",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": [],
+    "description": "Overview of biomedical engineering including biomechanics, biomaterials, and medical devices.",
+    "tags": ["core", "bme", "intro"],
+    "source_url": "https://catalog.utexas.edu/courses/bme-303/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "BME 335",
+    "title": "Biomechanics",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["M 408D"],
+    "description": "Mechanics of biological tissues and systems. Stress, strain, and material properties.",
+    "tags": ["core", "bme", "mechanics"],
+    "source_url": "https://catalog.utexas.edu/courses/bme-335/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "BME 344",
+    "title": "Quantitative Physiology",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["BME 303"],
+    "description": "Mathematical modeling of physiological systems. Cardiovascular, respiratory, and renal systems.",
+    "tags": ["core", "bme", "physiology"],
+    "source_url": "https://catalog.utexas.edu/courses/bme-344/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "BME 353L",
+    "title": "Biomedical Engineering Laboratory",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["BME 335"],
+    "description": "Hands-on laboratory experiments in biomedical engineering. Includes lab component.",
+    "tags": ["core", "bme", "lab"],
+    "source_url": "https://catalog.utexas.edu/courses/bme-353l/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "BME 365S",
+    "title": "Biomaterials",
+    "credits": 3,
+    "terms": ["Spring"],
+    "prereqs": ["BME 335"],
+    "description": "Properties and applications of materials in medical devices and implants.",
+    "tags": ["elective", "bme", "materials"],
+    "source_url": "https://catalog.utexas.edu/courses/bme-365s/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "BME 371",
+    "title": "Biomedical Signals and Systems",
+    "credits": 3,
+    "terms": ["Fall"],
+    "prereqs": ["M 408D"],
+    "description": "Signal processing for biomedical applications. Fourier analysis, filtering, and image processing.",
+    "tags": ["elective", "bme", "signals"],
+    "source_url": "https://catalog.utexas.edu/courses/bme-371/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "CH 301",
+    "title": "Principles of Chemistry I",
+    "credits": 3,
+    "terms": ["Fall", "Spring", "Summer"],
+    "prereqs": [],
+    "description": "Fundamental concepts of chemistry including atomic structure and chemical bonding.",
+    "tags": ["chemistry", "foundation", "pre-med"],
+    "source_url": "https://catalog.utexas.edu/courses/ch-301/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "CH 302",
+    "title": "Principles of Chemistry II",
+    "credits": 3,
+    "terms": ["Fall", "Spring", "Summer"],
+    "prereqs": ["CH 301"],
+    "description": "Continuation of general chemistry. Includes laboratory component.",
+    "tags": ["chemistry", "foundation", "pre-med"],
+    "source_url": "https://catalog.utexas.edu/courses/ch-302/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "CH 320N",
+    "title": "Organic Chemistry I",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CH 302"],
+    "description": "Structure, properties, and reactions of organic compounds. Includes lab.",
+    "tags": ["chemistry", "orgchem", "pre-med"],
+    "source_url": "https://catalog.utexas.edu/courses/ch-320n/"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "code": "BCH 369",
+    "title": "Introduction to Biochemistry",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CH 320N"],
+    "description": "Structure and function of biological macromolecules. Enzyme kinetics and metabolism.",
+    "tags": ["biochemistry", "pre-med"],
+    "source_url": "https://catalog.utexas.edu/courses/bch-369/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "CS 312",
+    "title": "Introduction to Programming",
+    "credits": 3,
+    "terms": ["Fall", "Spring", "Summer"],
+    "prereqs": [],
+    "description": "Problem solving and programming using Java. Algorithms and data structures.",
+    "tags": ["core", "cs", "programming"],
+    "source_url": "https://catalog.utexas.edu/courses/cs-312/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "CS 314",
+    "title": "Data Structures",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CS 312"],
+    "description": "Abstract data types, recursion, linked lists, stacks, queues, trees, and graphs.",
+    "tags": ["core", "cs", "data-structures"],
+    "source_url": "https://catalog.utexas.edu/courses/cs-314/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "CS 311",
+    "title": "Discrete Mathematics",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": [],
+    "description": "Logic, sets, relations, functions, combinatorics, and graph theory.",
+    "tags": ["core", "cs", "math"],
+    "source_url": "https://catalog.utexas.edu/courses/cs-311/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "CS 429",
+    "title": "Computer Organization and Architecture",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CS 314"],
+    "description": "Digital logic, instruction sets, assembly programming, and computer architecture.",
+    "tags": ["core", "cs", "systems"],
+    "source_url": "https://catalog.utexas.edu/courses/cs-429/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "CS 331",
+    "title": "Algorithms and Complexity",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CS 314", "CS 311"],
+    "description": "Design and analysis of algorithms. Sorting, searching, graph algorithms, NP-completeness.",
+    "tags": ["core", "cs", "algorithms"],
+    "source_url": "https://catalog.utexas.edu/courses/cs-331/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "CS 343",
+    "title": "Artificial Intelligence",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CS 314"],
+    "description": "Problem-solving, search, knowledge representation, and machine learning.",
+    "tags": ["elective", "cs", "ai"],
+    "source_url": "https://catalog.utexas.edu/courses/cs-343/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "CS 373",
+    "title": "Software Engineering",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CS 314"],
+    "description": "Software development lifecycle, testing, version control, and agile methods.",
+    "tags": ["elective", "cs", "software-eng"],
+    "source_url": "https://catalog.utexas.edu/courses/cs-373/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "CS 378",
+    "title": "Machine Learning",
+    "credits": 3,
+    "terms": ["Spring"],
+    "prereqs": ["CS 331"],
+    "description": "Supervised and unsupervised learning, neural networks, deep learning.",
+    "tags": ["elective", "cs", "ml"],
+    "source_url": "https://catalog.utexas.edu/courses/cs-378/"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "code": "M 340L",
+    "title": "Matrices and Matrix Calculations",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": [],
+    "description": "Linear algebra for computer science. Vector spaces, linear transformations, eigenvalues.",
+    "tags": ["math", "foundation"],
+    "source_url": "https://catalog.utexas.edu/courses/m-340l/"
+  }
+]

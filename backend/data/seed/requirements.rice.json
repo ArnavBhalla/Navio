@@ -1,0 +1,105 @@
+[
+  {
+    "program_id": "rice-bioe-2025",
+    "requirement_id": "rice-bioe-core-1",
+    "type": "AND",
+    "description": "Complete all BIOE core foundation courses",
+    "rules": [
+      {"type": "COURSE", "code": "BIOE 252"},
+      {"type": "COURSE", "code": "BIOE 372"},
+      {"type": "COURSE", "code": "BIOE 310"}
+    ],
+    "text_source": "Rice General Announcements 2025, Bioengineering Core Requirements Section",
+    "source_url": "https://ga.rice.edu/programs/bioengineering-bs/#requirementstext"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "requirement_id": "rice-bioe-math",
+    "type": "COURSE",
+    "description": "Complete multivariable calculus",
+    "rules": [
+      {"type": "COURSE", "code": "MATH 212"}
+    ],
+    "text_source": "Rice General Announcements 2025, Bioengineering Mathematics Requirements",
+    "source_url": "https://ga.rice.edu/programs/bioengineering-bs/#requirementstext"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "requirement_id": "rice-bioe-electives",
+    "type": "ELECTIVE_GROUP",
+    "description": "Complete at least 2 BIOE electives from approved list",
+    "rules": [
+      {"type": "MIN_COUNT", "count": 2, "from": [
+        {"type": "COURSE", "code": "BIOE 420"},
+        {"type": "COURSE", "code": "BIOE 415"},
+        {"type": "COURSE", "code": "BIOE 450"}
+      ]}
+    ],
+    "text_source": "Rice General Announcements 2025, Bioengineering Elective Requirements",
+    "source_url": "https://ga.rice.edu/programs/bioengineering-bs/#requirementstext"
+  },
+  {
+    "program_id": "rice-bioe-2025",
+    "requirement_id": "rice-bioe-chem",
+    "type": "AND",
+    "description": "Complete general chemistry sequence",
+    "rules": [
+      {"type": "COURSE", "code": "CHEM 121"},
+      {"type": "COURSE", "code": "CHEM 122"}
+    ],
+    "text_source": "Rice General Announcements 2025, Bioengineering Chemistry Requirements",
+    "source_url": "https://ga.rice.edu/programs/bioengineering-bs/#requirementstext"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "requirement_id": "rice-cs-core-programming",
+    "type": "AND",
+    "description": "Complete foundational programming sequence",
+    "rules": [
+      {"type": "COURSE", "code": "COMP 140"},
+      {"type": "COURSE", "code": "COMP 182"},
+      {"type": "COURSE", "code": "COMP 215"}
+    ],
+    "text_source": "Rice General Announcements 2025, Computer Science Core Programming",
+    "source_url": "https://ga.rice.edu/programs/computer-science-bs/#requirementstext"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "requirement_id": "rice-cs-systems",
+    "type": "COURSE",
+    "description": "Complete computer systems course",
+    "rules": [
+      {"type": "COURSE", "code": "COMP 321"}
+    ],
+    "text_source": "Rice General Announcements 2025, Computer Science Systems Requirement",
+    "source_url": "https://ga.rice.edu/programs/computer-science-bs/#requirementstext"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "requirement_id": "rice-cs-math",
+    "type": "AND",
+    "description": "Complete mathematics foundation",
+    "rules": [
+      {"type": "COURSE", "code": "MATH 354"},
+      {"type": "COURSE", "code": "STAT 310"}
+    ],
+    "text_source": "Rice General Announcements 2025, Computer Science Math Requirements",
+    "source_url": "https://ga.rice.edu/programs/computer-science-bs/#requirementstext"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "requirement_id": "rice-cs-electives",
+    "type": "ELECTIVE_GROUP",
+    "description": "Complete at least 3 CS electives at 300-level or above",
+    "rules": [
+      {"type": "MIN_COUNT", "count": 3, "from": [
+        {"type": "COURSE", "code": "COMP 330"},
+        {"type": "COURSE", "code": "COMP 382"},
+        {"type": "COURSE", "code": "COMP 424"},
+        {"type": "COURSE", "code": "COMP 440"}
+      ]}
+    ],
+    "text_source": "Rice General Announcements 2025, Computer Science Elective Requirements",
+    "source_url": "https://ga.rice.edu/programs/computer-science-bs/#requirementstext"
+  }
+]

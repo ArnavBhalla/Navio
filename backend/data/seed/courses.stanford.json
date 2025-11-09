@@ -1,0 +1,233 @@
+[
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "MATH 51",
+    "title": "Linear Algebra, Multivariable Calculus, and Modern Applications",
+    "credits": 5,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": [],
+    "description": "Multivariable calculus, linear algebra, and differential equations with applications.",
+    "tags": ["math", "foundation"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=MATH+51"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "BIOE 80",
+    "title": "Introduction to Bioengineering",
+    "credits": 3,
+    "terms": ["Fall"],
+    "prereqs": [],
+    "description": "Overview of bioengineering disciplines including biomechanics, tissue engineering, and medical devices.",
+    "tags": ["core", "bioe", "intro"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=BIOE+80"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "BIOE 101",
+    "title": "Systems Biology",
+    "credits": 3,
+    "terms": ["Winter"],
+    "prereqs": ["MATH 51"],
+    "description": "Quantitative modeling of biological systems. Gene networks, signaling pathways, and metabolic networks.",
+    "tags": ["core", "bioe", "systems"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=BIOE+101"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "BIOE 141",
+    "title": "Bioengineering Fundamentals",
+    "credits": 4,
+    "terms": ["Fall"],
+    "prereqs": ["MATH 51"],
+    "description": "Transport phenomena, thermodynamics, and kinetics in biological systems.",
+    "tags": ["core", "bioe", "fundamentals"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=BIOE+141"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "BIOE 142",
+    "title": "Bioengineering Laboratory",
+    "credits": 4,
+    "terms": ["Winter"],
+    "prereqs": ["BIOE 141"],
+    "description": "Laboratory techniques in bioengineering. Experimental design, data analysis, technical writing. Lab required.",
+    "tags": ["core", "bioe", "lab"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=BIOE+142"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "BIOE 212",
+    "title": "Introduction to Biomechanics",
+    "credits": 3,
+    "terms": ["Spring"],
+    "prereqs": ["MATH 51"],
+    "description": "Mechanics of cells, tissues, and organs. Stress-strain relationships and mechanical testing.",
+    "tags": ["elective", "bioe", "mechanics"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=BIOE+212"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "BIOE 220",
+    "title": "Tissue Engineering",
+    "credits": 3,
+    "terms": ["Spring"],
+    "prereqs": ["BIOE 141"],
+    "description": "Cell-biomaterial interactions, scaffold design, and regenerative medicine applications.",
+    "tags": ["elective", "bioe", "tissue"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=BIOE+220"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "BIOE 244",
+    "title": "Biological and Medical Imaging",
+    "credits": 3,
+    "terms": ["Winter"],
+    "prereqs": ["MATH 51"],
+    "description": "X-ray, CT, MRI, ultrasound, and optical imaging modalities. Image processing and reconstruction.",
+    "tags": ["elective", "bioe", "imaging"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=BIOE+244"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "CHEM 31A",
+    "title": "Chemical Principles I",
+    "credits": 4,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": [],
+    "description": "Atomic structure, bonding, thermodynamics, and kinetics.",
+    "tags": ["chemistry", "foundation", "pre-med"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CHEM+31A"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "CHEM 31B",
+    "title": "Chemical Principles II",
+    "credits": 4,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": ["CHEM 31A"],
+    "description": "Chemical equilibria, acids and bases, electrochemistry. Includes laboratory.",
+    "tags": ["chemistry", "foundation", "pre-med"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CHEM+31B"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "code": "CHEM 130",
+    "title": "Organic Chemistry",
+    "credits": 5,
+    "terms": ["Fall", "Winter"],
+    "prereqs": ["CHEM 31B"],
+    "description": "Structure, bonding, and reactivity of organic molecules. Includes laboratory.",
+    "tags": ["chemistry", "orgchem", "pre-med"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CHEM+130"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 103",
+    "title": "Mathematical Foundations of Computing",
+    "credits": 5,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": [],
+    "description": "Discrete math, proof techniques, logic, and computational theory.",
+    "tags": ["core", "cs", "math"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+103"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 106B",
+    "title": "Programming Abstractions",
+    "credits": 5,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": [],
+    "description": "Abstraction, recursion, data structures, and algorithms in C++.",
+    "tags": ["core", "cs", "programming"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+106B"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 107",
+    "title": "Computer Organization and Systems",
+    "credits": 5,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": ["CS 106B"],
+    "description": "Computer architecture, memory hierarchy, and system-level programming in C.",
+    "tags": ["core", "cs", "systems"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+107"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 109",
+    "title": "Introduction to Probability for Computer Scientists",
+    "credits": 5,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": ["MATH 51"],
+    "description": "Probability theory, random variables, distributions, and statistical inference.",
+    "tags": ["core", "cs", "math", "statistics"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+109"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 110",
+    "title": "Principles of Computer Systems",
+    "credits": 5,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CS 107"],
+    "description": "Operating systems, concurrency, synchronization, networking, and distributed systems.",
+    "tags": ["core", "cs", "systems"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+110"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 161",
+    "title": "Design and Analysis of Algorithms",
+    "credits": 5,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": ["CS 103", "CS 106B"],
+    "description": "Algorithm design paradigms, complexity analysis, NP-completeness, and approximation algorithms.",
+    "tags": ["core", "cs", "algorithms"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+161"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 221",
+    "title": "Artificial Intelligence: Principles and Techniques",
+    "credits": 3,
+    "terms": ["Fall", "Spring"],
+    "prereqs": ["CS 103", "CS 109"],
+    "description": "Search, constraint satisfaction, Markov decision processes, and machine learning.",
+    "tags": ["elective", "cs", "ai"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+221"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 229",
+    "title": "Machine Learning",
+    "credits": 3,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": ["CS 109"],
+    "description": "Supervised and unsupervised learning, deep learning, neural networks, and reinforcement learning.",
+    "tags": ["elective", "cs", "ml"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+229"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 190",
+    "title": "Software Design Studio",
+    "credits": 3,
+    "terms": ["Winter"],
+    "prereqs": ["CS 106B"],
+    "description": "Software engineering principles, design patterns, testing, and project management.",
+    "tags": ["elective", "cs", "software-eng"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+190"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "code": "CS 191",
+    "title": "Independent Research",
+    "credits": 3,
+    "terms": ["Fall", "Winter", "Spring"],
+    "prereqs": ["CS 161"],
+    "description": "Supervised independent research project with faculty advisor.",
+    "tags": ["elective", "cs", "research", "pre-grad"],
+    "source_url": "https://explorecourses.stanford.edu/search?q=CS+191"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "program_id": "rice-bioe-2025",
+    "university": "Rice",
+    "degree": "BS",
+    "major": "Bioengineering",
+    "version_year": 2025,
+    "catalog_url": "https://ga.rice.edu/programs/bioengineering-bs/",
+    "notes": "Official General Announcements 2025"
+  },
+  {
+    "program_id": "rice-cs-2025",
+    "university": "Rice",
+    "degree": "BS",
+    "major": "Computer Science",
+    "version_year": 2025,
+    "catalog_url": "https://ga.rice.edu/programs/computer-science-bs/",
+    "notes": "Official General Announcements 2025"
+  },
+  {
+    "program_id": "utexas-bme-2025",
+    "university": "UT Austin",
+    "degree": "BS",
+    "major": "Biomedical Engineering",
+    "version_year": 2025,
+    "catalog_url": "https://catalog.utexas.edu/undergraduate/engineering/biomedical-engineering/",
+    "notes": "Official Undergraduate Catalog 2025"
+  },
+  {
+    "program_id": "utexas-cs-2025",
+    "university": "UT Austin",
+    "degree": "BS",
+    "major": "Computer Science",
+    "version_year": 2025,
+    "catalog_url": "https://catalog.utexas.edu/undergraduate/natural-sciences/computer-science/",
+    "notes": "Official Undergraduate Catalog 2025"
+  },
+  {
+    "program_id": "stanford-bioe-2025",
+    "university": "Stanford",
+    "degree": "BS",
+    "major": "Bioengineering",
+    "version_year": 2025,
+    "catalog_url": "https://bulletin.stanford.edu/programs/bioengineering",
+    "notes": "Official Stanford Bulletin 2025"
+  },
+  {
+    "program_id": "stanford-cs-2025",
+    "university": "Stanford",
+    "degree": "BS",
+    "major": "Computer Science",
+    "version_year": 2025,
+    "catalog_url": "https://bulletin.stanford.edu/programs/computer-science",
+    "notes": "Official Stanford Bulletin 2025"
+  }
+]

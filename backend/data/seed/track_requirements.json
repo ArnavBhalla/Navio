@@ -1,0 +1,134 @@
+[
+  {
+    "track": "pre-med",
+    "buckets": [
+      {
+        "name": "Biology",
+        "min_courses": 2,
+        "tags": ["biology", "bio"],
+        "notes": "Two semesters with labs preferred"
+      },
+      {
+        "name": "Chemistry",
+        "min_courses": 2,
+        "tags": ["chemistry"],
+        "notes": "General chemistry with lab"
+      },
+      {
+        "name": "Organic Chemistry",
+        "min_courses": 1,
+        "tags": ["orgchem"],
+        "notes": "One semester minimum with lab"
+      },
+      {
+        "name": "Biochemistry",
+        "min_courses": 1,
+        "tags": ["biochemistry"],
+        "notes": "Required for most medical schools"
+      },
+      {
+        "name": "Physics",
+        "min_courses": 2,
+        "tags": ["physics"],
+        "notes": "Two semesters with labs"
+      },
+      {
+        "name": "Math/Statistics",
+        "min_courses": 1,
+        "tags": ["calculus", "statistics", "math"],
+        "notes": "Calculus or statistics"
+      }
+    ],
+    "disclaimer": "Pre-med requirements vary by medical school. Always verify with target schools and your pre-health advisor."
+  },
+  {
+    "track": "pre-law",
+    "buckets": [
+      {
+        "name": "Writing",
+        "min_courses": 2,
+        "tags": ["writing", "fwis", "composition"],
+        "notes": "Strong writing skills essential"
+      },
+      {
+        "name": "Critical Thinking",
+        "min_courses": 2,
+        "tags": ["philosophy", "logic", "ethics"],
+        "notes": "Logic, philosophy, or ethics courses"
+      },
+      {
+        "name": "Social Sciences",
+        "min_courses": 2,
+        "tags": ["economics", "political-science", "sociology"],
+        "notes": "Understanding social structures"
+      },
+      {
+        "name": "Public Speaking",
+        "min_courses": 1,
+        "tags": ["speech", "communication"],
+        "notes": "Communication and rhetoric"
+      }
+    ],
+    "disclaimer": "Law schools value diverse academic backgrounds. Focus on GPA, critical thinking, and writing skills."
+  },
+  {
+    "track": "pre-grad",
+    "buckets": [
+      {
+        "name": "Advanced Technical Courses",
+        "min_courses": 3,
+        "tags": ["algorithms", "theory", "advanced", "ml", "ai"],
+        "notes": "Upper-division courses in your field"
+      },
+      {
+        "name": "Research Experience",
+        "min_courses": 1,
+        "tags": ["research", "independent-study", "pre-grad"],
+        "notes": "Independent research or thesis"
+      },
+      {
+        "name": "Mathematics",
+        "min_courses": 2,
+        "tags": ["math", "statistics", "probability"],
+        "notes": "Strong quantitative foundation"
+      },
+      {
+        "name": "Technical Writing",
+        "min_courses": 1,
+        "tags": ["writing", "technical-writing"],
+        "notes": "Scientific or technical writing course"
+      }
+    ],
+    "disclaimer": "Graduate school preparation varies by field. Consult with faculty in your intended research area."
+  },
+  {
+    "track": "pre-mba",
+    "buckets": [
+      {
+        "name": "Business Fundamentals",
+        "min_courses": 2,
+        "tags": ["business", "economics", "accounting", "finance"],
+        "notes": "Intro to business, economics, or accounting"
+      },
+      {
+        "name": "Quantitative Skills",
+        "min_courses": 2,
+        "tags": ["math", "statistics", "data-science"],
+        "notes": "Statistics, calculus, or data analysis"
+      },
+      {
+        "name": "Leadership",
+        "min_courses": 1,
+        "tags": ["management", "leadership", "organizational-behavior"],
+        "notes": "Management or organizational behavior"
+      },
+      {
+        "name": "Communication",
+        "min_courses": 1,
+        "tags": ["writing", "speech", "communication"],
+        "notes": "Business communication or public speaking"
+      }
+    ],
+    "disclaimer": "MBA programs value work experience most. Focus on leadership roles and quantitative skills during undergrad."
+  }
+]
