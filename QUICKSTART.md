@@ -16,8 +16,8 @@ psql --version     # Should be 14+
 # Create database
 createdb navio
 
-# Enable pgvector
-psql navio -c "CREATE EXTENSION vector;"
+# Note: pgvector extension is NOT required - embeddings are stored as PostgreSQL arrays
+# and similarity is computed in Python
 ```
 
 ## 2. Backend Setup
@@ -37,11 +37,18 @@ cp .env.example .env
 ```
 
 **Edit `backend/.env` with your keys:**
+
+**Important:** Replace `YOUR_USERNAME` and `YOUR_PASSWORD` with your actual PostgreSQL credentials.
+
 ```env
-DATABASE_URL=postgresql://localhost:5432/navio
+# Format: postgresql://username:password@localhost:5432/navio
+# If you don't know your PostgreSQL password, see troubleshooting section below
+DATABASE_URL=postgresql://YOUR_USERNAME:YOUR_PASSWORD@localhost:5432/navio
 OPENAI_API_KEY=sk-your-openai-key
 ANTHROPIC_API_KEY=sk-ant-your-anthropic-key
 ```
+
+**Quick check:** Your username is usually your system username. To find it, run: `whoami`
 
 ## 3. Seed Database
 
@@ -52,7 +59,7 @@ python scripts/seed_database.py
 
 You should see:
 ```
-✓ Database initialized with pgvector extension
+✓ Database initialized
 ✓ Seeded 6 programs
 ✓ Seeded 60 courses with embeddings
 ✓ Seeded 27 requirements with embeddings
@@ -101,9 +108,38 @@ You should see course recommendations with citations!
 
 ## Troubleshooting
 
-### "ModuleNotFoundError: No module named 'pgvector'"
+### "password authentication failed" or "fe_sendauth: no password supplied"
+
+**Option 1: Add password to DATABASE_URL (Recommended)**
+
+Update your `backend/.env` file to include your PostgreSQL password:
+```env
+DATABASE_URL=postgresql://YOUR_USERNAME:YOUR_PASSWORD@localhost:5432/navio
+```
+
+If you don't know your PostgreSQL password, you can reset it:
 ```bash
-pip install pgvector
+# Connect as postgres superuser (you'll be prompted for postgres password)
+psql -U postgres
+
+# Once connected, run:
+ALTER USER YOUR_USERNAME WITH PASSWORD 'your_new_password';
+\q
+
+# Then update .env with the new password
+```
+
+**Option 2: Set up passwordless authentication (Advanced)**
+
+Edit PostgreSQL config to allow trust authentication for local connections:
+```bash
+# Edit pg_hba.conf (usually at /opt/homebrew/var/postgresql@14/pg_hba.conf)
+# Ensure these lines exist:
+# local   all             all                                     trust
+# host    all             all             127.0.0.1/32            trust
+
+# Then restart PostgreSQL:
+brew services restart postgresql@14
 ```
 
 ### "relation 'embeddings' does not exist"
@@ -116,6 +152,11 @@ Check your `backend/.env` file has the correct API keys
 
 ### Frontend can't connect to backend
 Make sure `NEXT_PUBLIC_API_URL=http://localhost:8000` in `frontend/.env.local`
+
+### "OperationalError: connection to server failed"
+- Make sure PostgreSQL is running: `brew services start postgresql@14` (or your version)
+- Verify the database exists: `psql -l | grep navio`
+- Check your `DATABASE_URL` format matches your PostgreSQL setup
 
 ## Next Steps
 

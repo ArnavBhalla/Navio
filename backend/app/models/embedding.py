@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer, Text
-from sqlalchemy.dialects.postgresql import JSONB
-from pgvector.sqlalchemy import Vector
+from sqlalchemy.dialects.postgresql import JSONB, ARRAY
+from sqlalchemy import Float
 from app.core.database import Base
 from app.core.config import settings
 
@@ -12,5 +12,5 @@ class Embedding(Base):
     program_id = Column(String, nullable=False, index=True)
     type = Column(String, nullable=False, index=True)  # "course" or "requirement"
     content_text = Column(Text, nullable=False)  # The text that was embedded
-    vector = Column(Vector(settings.EMBEDDING_DIMENSION))  # The embedding vector
-    metadata = Column(JSONB)  # {code?, requirement_id?, source_url, etc.}
+    vector = Column(ARRAY(Float), nullable=False)  # The embedding vector stored as array
+    meta_data = Column(JSONB)  # {code?, requirement_id?, source_url, etc.}

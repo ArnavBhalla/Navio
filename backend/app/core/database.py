@@ -19,13 +19,6 @@ def get_db():
 
 
 def init_db():
-    """Initialize database and enable pgvector extension"""
-    from sqlalchemy import text
-
-    with engine.connect() as conn:
-        # Enable pgvector extension
-        conn.execute(text("CREATE EXTENSION IF NOT EXISTS vector"))
-        conn.commit()
-
+    """Initialize database and create tables"""
     # Create all tables
     Base.metadata.create_all(bind=engine)

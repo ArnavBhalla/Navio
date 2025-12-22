@@ -11,9 +11,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from sqlalchemy.orm import Session
 from openai import OpenAI
-from app.core.database import SessionLocal, engine, init_db
+from app.core.database import SessionLocal, engine, init_db, Base
 from app.core.config import settings
-from app.models import Base, Program, Course, Requirement, TrackRequirement, Embedding
+from app.models import Program, Course, Requirement, TrackRequirement, Embedding
 
 
 def load_json(file_path: str):
@@ -106,7 +106,7 @@ def seed_courses(db: Session, client: OpenAI, data_dir: Path):
                     type="course",
                     content_text=embed_text,
                     vector=vector,
-                    metadata={
+                    meta_data={
                         "code": course_data['code'],
                         "title": course_data['title'],
                         "source_url": course_data.get('source_url', '')
@@ -152,7 +152,7 @@ def seed_requirements(db: Session, client: OpenAI, data_dir: Path):
                     type="requirement",
                     content_text=embed_text,
                     vector=vector,
-                    metadata={
+                    meta_data={
                         "requirement_id": req_data['requirement_id'],
                         "description": req_data.get('description', ''),
                         "source_url": req_data.get('source_url', '')
@@ -190,7 +190,7 @@ def main():
     # Initialize database
     print("\nInitializing database...")
     init_db()
-    print("✓ Database initialized with pgvector extension")
+    print("✓ Database initialized")
 
     # Get data directory
     data_dir = Path(__file__).parent.parent / "data"

@@ -2,8 +2,8 @@
 RAG service for retrieval and context generation
 """
 from typing import List, Dict, Any
+import math
 from sqlalchemy.orm import Session
-from sqlalchemy import text
 from openai import OpenAI
 from app.core.config import settings
 from app.models import Embedding, Course, Requirement
@@ -21,6 +21,24 @@ class RAGService:
             input=text
         )
         return response.data[0].embedding
+
+    def cosine_similarity(self, vec1: List[float], vec2: List[float]) -> float:
+        """Calculate cosine similarity between two vectors"""
+        if len(vec1) != len(vec2):
+            return 0.0
+        
+        dot_product = sum(a * b for a, b in zip(vec1, vec2))
+        magnitude1 = math.sqrt(sum(a * a for a in vec1))
+        magnitude2 = math.sqrt(sum(a * a for a in vec2))
+        
+        if magnitude1 == 0 or magnitude2 == 0:
+            return 0.0
+        
+        return dot_product / (magnitude1 * magnitude2)
+    
+    def cosine_distance(self, vec1: List[float], vec2: List[float]) -> float:
+        """Calculate cosine distance (1 - similarity)"""
+        return 1.0 - self.cosine_similarity(vec1, vec2)
 
     def retrieve_context(
         self,
@@ -48,42 +66,29 @@ class RAGService:
         # Generate query embedding
         query_vector = self.generate_embedding(query)
 
-        # Perform vector similarity search with pgvector
-        # Using cosine distance operator <=>
-        sql = text("""
-            SELECT
-                id,
-                program_id,
-                type,
-                content_text,
-                metadata,
-                vector <=> CAST(:query_vector AS vector) AS distance
-            FROM embeddings
-            WHERE program_id = :program_id
-            ORDER BY vector <=> CAST(:query_vector AS vector)
-            LIMIT :k
-        """)
+        # Fetch all embeddings for the program
+        embeddings = self.db.query(Embedding).filter(
+            Embedding.program_id == program_id
+        ).all()
 
-        results = self.db.execute(
-            sql,
-            {
-                "query_vector": str(query_vector),
-                "program_id": program_id,
-                "k": k * 2  # Get more for re-ranking
-            }
-        ).fetchall()
-
-        # Convert to list of dicts
+        # Calculate cosine distance for each embedding
         retrieved = []
-        for row in results:
+        for emb in embeddings:
+            distance = self.cosine_distance(query_vector, emb.vector)
             retrieved.append({
-                "id": row.id,
-                "program_id": row.program_id,
-                "type": row.type,
-                "content_text": row.content_text,
-                "metadata": row.metadata,
-                "distance": row.distance
+                "id": emb.id,
+                "program_id": emb.program_id,
+                "type": emb.type,
+                "content_text": emb.content_text,
+                "metadata": emb.meta_data,
+                "distance": distance
             })
+
+        # Sort by distance (lower is better)
+        retrieved.sort(key=lambda x: x["distance"])
+        
+        # Take top k * 2 for re-ranking
+        retrieved = retrieved[:k * 2]
 
         # Re-rank based on prerequisite matches
         retrieved = self._rerank_by_prereqs(retrieved, completed_courses)
