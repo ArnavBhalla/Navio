@@ -46,6 +46,17 @@ cp .env.example .env
 DATABASE_URL=postgresql://YOUR_USERNAME:YOUR_PASSWORD@localhost:5432/navio
 OPENAI_API_KEY=sk-your-openai-key
 ANTHROPIC_API_KEY=sk-ant-your-anthropic-key
+
+# Auth / JWT (change these for your environment)
+AUTH_SECRET_KEY=super-secret-change-me
+AUTH_ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=60
+
+# Demo users (override as you like)
+DEMO_ADMIN_USERNAME=admin
+DEMO_ADMIN_PASSWORD=admin123
+DEMO_USER_USERNAME=demo
+DEMO_USER_PASSWORD=demo123
 ```
 
 **Quick check:** Your username is usually your system username. To find it, run: `whoami`

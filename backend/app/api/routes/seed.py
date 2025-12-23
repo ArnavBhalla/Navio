@@ -7,12 +7,16 @@ from app.core.database import get_db
 from app.core.config import settings
 import subprocess
 from pathlib import Path
+from app.core.security import require_roles, User
 
 router = APIRouter()
 
 
 @router.post("/seed")
-async def seed_database(db: Session = Depends(get_db)):
+async def seed_database(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(require_roles(["admin"])),
+):
     """
     Trigger database seeding (development only)
 

@@ -7,6 +7,7 @@ from typing import List
 from app.core.database import get_db
 from app.services.rag import RAGService
 from pydantic import BaseModel
+from app.core.security import get_current_user, User
 
 
 class CourseSearchResult(BaseModel):
@@ -28,7 +29,8 @@ async def search_courses(
     program_id: str = Query(..., description="Program ID to search within"),
     q: str = Query(..., description="Search query (course code or title)"),
     limit: int = Query(10, ge=1, le=50, description="Maximum number of results"),
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ):
     """
     Fuzzy search for courses by code or title

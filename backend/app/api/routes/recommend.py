@@ -8,6 +8,7 @@ from app.schemas.recommend import RecommendRequest, RecommendResponse
 from app.services.rag import RAGService
 from app.services.ai import AIService
 from app.models import Program
+from app.core.security import get_current_user, User
 
 router = APIRouter()
 
@@ -15,7 +16,8 @@ router = APIRouter()
 @router.post("/recommend", response_model=RecommendResponse)
 async def recommend_courses(
     request: RecommendRequest,
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ):
     """
     Generate course recommendations for next semester
