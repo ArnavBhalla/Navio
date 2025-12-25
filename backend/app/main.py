@@ -10,11 +10,13 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from app.core.config import settings
 from app.core.database import init_db
 from app.core.rate_limit import InMemoryRateLimiter, RateLimitRule, rate_limit_key_from_request
-from app.api.routes import recommend, search, seed, auth
+from app.core.logging_config import setup_logging
+from app.core.middleware import RequestIDMiddleware, RequestLoggingMiddleware
+from app.api.routes import recommend, search, seed, auth, health
 
-# Configure basic logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("navio")
+# Configure structured logging
+# Set use_json=True in production for structured JSON logs
+logger = setup_logging(use_json=True)
 
 
 class RateLimitMiddleware(BaseHTTPMiddleware):
@@ -54,8 +56,9 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# CORS middleware
-app.addMiddleware(
+# Add middleware in correct order (last added = first executed)
+# 1. CORS middleware
+app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.FRONTEND_URL, "http://localhost:3000"],
     allow_credentials=True,
@@ -63,17 +66,35 @@ app.addMiddleware(
     allow_headers=["*"],
 )
 
-# Rate limiter: 60 requests per minute per IP+path
+# 2. Rate limiter: 60 requests per minute per IP+path
 rate_limiter = InMemoryRateLimiter(
     rule=RateLimitRule(requests=60, window=timedelta(minutes=1))
 )
 app.add_middleware(RateLimitMiddleware, limiter=rate_limiter)
 
+# 3. Request logging middleware (logs timing and status)
+app.add_middleware(RequestLoggingMiddleware)
+
+# 4. Request ID middleware (adds unique ID to each request)
+app.add_middleware(RequestIDMiddleware)
+
 
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
     """Return a consistent structure for validation errors."""
-    logger.warning(f"Validation error on {request.url}: {exc}")
+    # Get request metadata for structured logging
+    request_id = getattr(request.state, "request_id", None)
+
+    logger.warning(
+        f"Validation error on {request.method} {request.url.path}",
+        extra={
+            "request_id": request_id,
+            "method": request.method,
+            "path": str(request.url.path),
+            "errors": exc.errors(),
+        },
+    )
+
     return JSONResponse(
         status_code=422,
         content={
@@ -86,7 +107,18 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 @app.exception_handler(Exception)
 async def unhandled_exception_handler(request: Request, exc: Exception):
     """Catch-all handler to avoid leaking internals in responses."""
-    logger.exception(f"Unhandled error on {request.method} {request.url}: {exc}")
+    # Get request metadata for structured logging
+    request_id = getattr(request.state, "request_id", None)
+
+    logger.exception(
+        f"Unhandled error on {request.method} {request.url.path}",
+        extra={
+            "request_id": request_id,
+            "method": request.method,
+            "path": str(request.url.path),
+        },
+    )
+
     return JSONResponse(
         status_code=500,
         content={"detail": "Internal server error"},
@@ -94,6 +126,7 @@ async def unhandled_exception_handler(request: Request, exc: Exception):
 
 
 # Include routers
+app.include_router(health.router, tags=["health"])
 app.include_router(auth.router, tags=["auth"])
 app.include_router(recommend.router, prefix="/api", tags=["recommend"])
 app.include_router(search.router, prefix="/api", tags=["search"])
@@ -114,9 +147,6 @@ async def root():
         "message": "Navio Academic Advisor API",
         "version": "1.0.0",
         "docs": "/docs",
+        "health": "/health",
+        "metrics": "/metrics",
     }
-
-
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy"}

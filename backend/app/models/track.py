@@ -1,5 +1,4 @@
-from sqlalchemy import Column, String, Integer, Text
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy import Column, String, Integer, Text, JSON
 from app.core.database import Base
 
 
@@ -8,5 +7,5 @@ class TrackRequirement(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     track = Column(String, unique=True, nullable=False, index=True)  # pre-med, pre-law, etc.
-    buckets = Column(JSONB, nullable=False)  # Array of bucket objects
+    buckets = Column(JSON, nullable=False)  # Array of bucket objects
     disclaimer = Column(Text)

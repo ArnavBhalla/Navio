@@ -1,0 +1,71 @@
+# Fly.io configuration for Navio Academic Advisor API
+# See https://fly.io/docs/reference/configuration/ for full reference
+
+app = "navio-api"
+primary_region = "sjc"  # San Jose, California - change to your preferred region
+
+[build]
+  # Use the Dockerfile in the current directory
+  dockerfile = "Dockerfile"
+
+[env]
+  # Environment configuration
+  ENVIRONMENT = "production"
+  # FRONTEND_URL will be set via secrets (fly secrets set FRONTEND_URL=https://your-app.vercel.app)
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+  # Health check configuration
+  [http_service.checks]
+    [http_service.checks.health]
+      grace_period = "30s"
+      interval = "15s"
+      method = "GET"
+      path = "/health"
+      protocol = "http"
+      timeout = "10s"
+      tls_skip_verify = false
+
+      # Headers to add to health check requests
+      [http_service.checks.health.headers]
+        X-Health-Check = "fly"
+
+  # Concurrency limits
+  [[http_service.concurrency]]
+    type = "requests"
+    hard_limit = 200
+    soft_limit = 100
+
+# VM resources
+[vm]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 512  # Adjust based on your needs (512MB, 1024MB, etc.)
+
+# Scaling configuration
+[metrics]
+  port = 9091
+  path = "/metrics"
+
+# PostgreSQL database configuration
+# Create database with: fly postgres create --name navio-db
+# Attach to app with: fly postgres attach navio-db
+# This will automatically set the DATABASE_URL secret
+
+[[statics]]
+  guest_path = "/app/public"
+  url_prefix = "/static"
+
+# Secrets to set with fly CLI:
+# fly secrets set DATABASE_URL="postgresql://..."
+# fly secrets set OPENAI_API_KEY="sk-..."
+# fly secrets set ANTHROPIC_API_KEY="sk-ant-..."
+# fly secrets set FRONTEND_URL="https://your-app.vercel.app"
+# fly secrets set AUTH_SECRET_KEY="your-secure-random-key"
+# fly secrets set FIRECRAWL_API_KEY="..." (optional)

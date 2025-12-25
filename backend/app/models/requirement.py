@@ -1,5 +1,4 @@
-from sqlalchemy import Column, String, Integer, Text, ForeignKey
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy import Column, String, Integer, Text, ForeignKey, JSON
 from app.core.database import Base
 
 
@@ -11,6 +10,6 @@ class Requirement(Base):
     requirement_id = Column(String, nullable=False, index=True)  # e.g., "bioe-core-1"
     type = Column(String, nullable=False)  # AND, OR, ELECTIVE_GROUP, DISTRIBUTION
     description = Column(Text)
-    rules = Column(JSONB, nullable=False)  # Nested rules structure
+    rules = Column(JSON, nullable=False)  # Nested rules structure
     text_source = Column(Text)
     source_url = Column(Text)
